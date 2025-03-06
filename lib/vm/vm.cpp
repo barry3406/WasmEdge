@@ -483,7 +483,6 @@ Expect<void> VM::unsafeInstantiate() {
       spdlog::error("LLVM disabled, JIT is unsupported!"sv);
 #endif
     }
-
     EXPECTED_TRY(ActiveModInst,
                  ExecutorEngine.instantiateModule(StoreRef, *Mod));
     Stage = VMStage::Instantiated;
